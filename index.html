@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Will you be my Valentine?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #fff0f5;
+      margin-top: 80px;
+    }
+
+    img {
+      width: 200px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    #yesBtn {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #noBtn {
+      background-color: #c0392b;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Bild austauschen gegen dein eigenes -->
+  <img src="https://tse2.mm.bing.net/th/id/OIP.RTs9ZWiJ375EW96nShTy2wHaHa?pid=Api&P=0&h=180" alt="Cute Bear" />
+
+  <h1>Will you be my Valentine?</h1>
+
+  <div class="buttons">
+    <button id="yesBtn">Yes</button>
+    <button id="noBtn">No</button>
+  </div>
+
+  <script>
+    const yesBtn = document.getElementById("yesBtn");
+    const noBtn = document.getElementById("noBtn");
+
+    let yesSize = 18; // Start-Schriftgröße in px
+
+    noBtn.addEventListener("click", () => {
+      yesSize += 10; // Ja-Button wird größer
+      yesBtn.style.fontSize = yesSize + "px";
+      yesBtn.style.padding = (yesSize / 2) + "px " + yesSize + "px";
+    });
+
+    yesBtn.addEventListener("click", () => {
+  window.location.href = "valentine.html";
+});
+
+  </script>
+
+</body>
+</html>
